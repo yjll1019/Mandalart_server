@@ -25,4 +25,12 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	compile 'org.apache.httpcomponents:httpclient:4.5.7'
 	compile 'com.sun.mail:javax.mail' //mail
+
+	//social login, sign up
+	implementation('io.jsonwebtoken:jjwt:0.5')
+	compile 'org.springframework.security:spring-security-oauth2-client'
+	//AppProperties.java @ConfigurationProperties
+	compile "org.springframework.boot:spring-boot-configuration-processor"
+	compile 'org.springframework.security:spring-security-web'
+
 }
