@@ -27,7 +27,7 @@ public class Mandalart {
 
     String content;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id_fk", referencedColumnName = "user_id")
+   @ManyToOne
+    @JoinColumn(name = "user_id_fk", referencedColumnName = "id")
     User user;
 }
