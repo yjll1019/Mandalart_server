@@ -4,3 +4,20 @@ spring:
     url: jdbc:mysql://sofproject.ctvcsafsshra.us-east-2.rds.amazonaws.com:3306/mandalart_project?serverTimezone=Asia/Seoul
     username: user
     password: #
+
+#social login settings
+
+jpa :
+  show-sql : true
+  hibernate :
+    ddl-auto : update
+  #  naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+# 사용자가 성공적으로 로그인하며 jwt token 생성할 때 사용된다.
+app :
+  auth :
+    tokenSecret :
+    tokenExpirationMsec : 864000000 #240시간
